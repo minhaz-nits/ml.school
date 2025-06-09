@@ -1,11 +1,11 @@
 from metaflow import FlowSpec, conda, conda_base, step
 
 
-@conda_base(python="3.12.8", packages={"pandas": "2.2.3"})
+@conda_base(python="3.12.10", packages={"pandas": "2.2.3"})
 class Libraries(FlowSpec):
     """A flow that showcases how to manage libraries."""
 
-    @conda(packages={"matplotlib": "3.9.3"})
+    @conda(packages={"matplotlib": "3.10.3"})
     @step
     def start(self):
         """Import and print the version of Matplotlib."""
