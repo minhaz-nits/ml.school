@@ -1,12 +1,14 @@
 from metaflow import FlowSpec, step
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-client = OpenAI(api_key="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")
-
-
+load_dotenv()
 
 # Set your OpenAI key securely in environment or secrets manager
-# openai.api_key = "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"
+
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class LLMFlow(FlowSpec):
 
